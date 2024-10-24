@@ -32,7 +32,7 @@ openTaskFormBtn.addEventListener('click', () =>{
 
   taskForm.addEventListener('submit', (e)=> {
     e.preventDefault()
-  })
+  
 
   const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
@@ -45,4 +45,10 @@ openTaskFormBtn.addEventListener('click', () =>{
 
   if(dataArrIndex === -1){
     taskData.unshift(taskObj);
-  }  
+  } 
+
+  taskData.forEach(({id, title, date, description}));
+  
+})
+
+
